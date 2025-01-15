@@ -1,0 +1,142 @@
+/* CORPO */
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+}
+
+#Gray {
+    background-color: rgba(23, 23, 23, 1);
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+}
+
+#Nike {
+    background: linear-gradient(45deg, rgba(242, 88, 47, 1), rgba(155, 0, 62, 1)); /* Degradê no fundo */
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    /* FONTE */
+    font-family: "Inter", serif;
+    font-size: 13px; 
+    color: #fff; 
+}
+
+#TopNike {
+    margin: 0px;
+    justify-content: space-around;
+    flex-direction: row;
+    display: flex;
+    padding: 20px
+}
+
+#secao {
+    flex-direction: column;
+    display: flex;
+}
+
+/* FONTES */
+p {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    color: rgb(204, 204, 204);
+    font-style: normal;
+    font-size: 13px; 
+    font-weight: 200;
+}
+
+p2 {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    color: rgb(204, 204, 204);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px; 
+}
+
+/* BOTÕES */
+.Abtn {
+    background: linear-gradient(45deg, rgba(67, 8, 106, 1), rgba(1, 204, 245, 1));
+}
+
+.Nbtn {
+    background: linear-gradient(45deg, rgba(242, 88, 47, 1), rgba(155, 0, 62, 1));
+}
+
+.Lbtn {
+    background: linear-gradient(45deg, rgba(92, 222, 245, 1), rgba(1, 245, 29, 1));
+}
+
+.VMbtn {
+    background-color: rgba(29, 29, 29, 0.466);
+    -webkit-backdrop-filter: blur(30px)
+}
+
+.Abtn, .Nbtn, .Lbtn, .VMbtn {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.726);
+    margin: 10px 10px 10px 0px;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+    color: white;
+    border: 0px;
+}
+
+#LogoEscr {
+    width: 40%;
+}
+
+/* IMAGENS */
+#BcgnrPeople {
+    display: none;
+}
+
+#LogoNike, #Hide {
+    width: 13%;
+}
+
+#Hide {
+    visibility: hidden;
+}
+
+
+/* MOBILE*/
+@media screen and (max-width: 768px) {
+    #TopGray {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 0px;
+    }
+
+    .textos {
+        margin-bottom: 20px;
+        text-align: center;
+        max-width: 300px;
+    }
+    
+    .textos p {
+        word-wrap: break-word;
+        font-size: 18px;
+        margin: 0 auto;
+    }
+    
+    .btns, p2 {
+        display: none;
+    }
+
+    #LogoBig {
+        width: 75%;
+        margin: 0px;
+    }
+
+    #LogoEscr {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
