@@ -13,39 +13,40 @@ body {
 }
 
 #Nike {
-    position: relative; 
+    position: relative;
     background: linear-gradient(to bottom, rgba(242, 88, 47, 1), rgba(155, 0, 62, 1));
     padding: 50px;
     font-family: "Inter", serif;
-    font-size: 13px; 
-    color: #fff; 
-    overflow: hidden; 
+    font-size: 13px;
+    color: #fff;
+    overflow: hidden;
 }
 
 /* DIVISÕES */
 #TopNike {
     justify-content: space-between;
-    margin-bottom: 20px; 
-    align-items: center; 
-    position: relative; 
+    margin-bottom: 20px;
+    align-items: center;
+    position: relative;
     display: flex;
 }
 
 #Secao {
-    align-items: flex-start; 
-    flex-direction: column; 
+    align-items: flex-start;
+    flex-direction: column;
     display: flex;
-    flex: 1; 
+    flex: 1;
 }
 
 #Roupas {
     transition: transform 0.3s ease, box-shadow 0.2s ease;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.726);
     background-color: rgba(0, 0, 0, 0.432);
+    backdrop-filter: blur(10px);
     flex-direction: column;
     border-radius: 30px;
     align-items: left;
-    text-align: left; 
+    text-align: left;
     display: flex;
     padding: 15px;
     z-index: 1;
@@ -59,7 +60,7 @@ body {
 #RoupasSecao {
     justify-content: space-between;
     flex-direction: row;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     display: flex;
     gap: 15px;
 }
@@ -67,20 +68,24 @@ body {
 /* IMAGENS */
 #BcgnrPeople {
     position: absolute;
-    object-fit: cover; 
-    height: 100%; 
-    width: auto; 
+    object-fit: cover;
+    height: 100%;
+    width: auto;
     right: 0;
-    top: 0; 
+    top: 0;
 }
 
-#LogoBrand, #Hide {
-    transform: translateX(-50%); 
+#LogoBrand {
+    transform: translateX(-50%);
     justify-content: center;
     position: absolute;
     z-index: 1;
     width: 10%;
-    left: 50%; 
+    left: 50%;
+}
+
+#LogoBrand2 {
+    display: none;
 }
 
 #LogoEscr {
@@ -106,7 +111,7 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.726);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background-color:rgba(242, 88, 47, 1);
+    background-color: rgba(242, 88, 47, 1);
     border-radius: 50px;
     padding: 10px 25px;
     font-weight: bold;
@@ -125,12 +130,19 @@ body {
     background: linear-gradient(45deg, rgba(242, 88, 47, 1), rgba(155, 0, 62, 1));
 }
 
+.EEbtn {
+    visibility: hidden;
+}
+
 .VMbtn {
     background-color: rgba(29, 29, 29, 0.466);
     -webkit-backdrop-filter: blur(30px)
 }
 
-.Abtn, .Nbtn, .Lbtn, .VMbtn {
+.Abtn,
+.Nbtn,
+.Lbtn,
+.VMbtn {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.568);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -169,39 +181,121 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-
 /* MOBILE*/
 @media screen and (max-width: 768px) {
-    #TopGray {
+    /* SEÇÃO */
+    #Gray {
         flex-direction: column;
         align-items: center;
-        padding: 10px;
-        gap: 0px;
     }
 
+    #Nike {
+        padding: 30px;
+        font-size: 15px;
+    }
+
+    #RoupasSecao {
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        padding-bottom: 15px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        display: flex;
+        gap: 15px;
+    }
+
+    #Roupas {
+        min-width: 120px;
+        flex: 0 0 auto;
+    }
+
+    #Secao {
+        flex-direction: column;
+        display: flex;
+    }
+
+    #RoupasSecao::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    #RoupasSecao::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.253);
+        border-radius: 4px;
+    }
+
+    #RoupasSecao::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    /* TEXTOS */
     .textos {
         margin-bottom: 20px;
         text-align: center;
         max-width: 300px;
     }
-    
+
     .textos p {
         word-wrap: break-word;
-        font-size: 18px;
+        font-size: 16px;
         margin: 0 auto;
     }
-    
-    .btns, p2 {
-        display: none;
-    }
 
+    /* IMAGENS */
     #LogoBig {
-        width: 75%;
         margin: 0px;
+        width: 75%;
     }
 
     #LogoEscr {
-        width: 90%;
         margin-bottom: 20px;
+        width: 90%;
+    }
+
+    #BcgnrPeople {
+        display: none;
+    }
+
+    #LogoBrand {
+        display: none;
+    }
+
+    #LogoBrand2 {
+        margin-bottom: 0px;
+        display: block;
+        width: 25%;
+    }
+
+    /* BOTÕES */
+    .EEbtn {
+        background: linear-gradient(45deg, rgba(155, 0, 62, 1), rgba(242, 88, 47, 1), rgb(135, 1, 245));
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.568);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 50px;
+        visibility: visible;
+        padding: 10px 25px;
+        font-weight: bold;
+        font-size: 15px;
+        color: white;
+        border: 0px;
+    }
+
+    .btnMobile {
+        justify-content: center;
+        margin-bottom: 30px;
+        display: flex;
+    }
+
+    .VMbtn {
+      margin: 5px 0px;
+    }
+
+    .EEbtn:hover {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.493);
+        transform: scale(0.9);
+    }
+
+    .btns, p2 {
+        display: none;
     }
 }
