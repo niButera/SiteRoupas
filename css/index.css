@@ -1,9 +1,4 @@
 /* CORPO */
-body {
-    background-color: rgb(255, 255, 255);
-    margin: 0px;
-}
-
 #Gray {
     background-color: rgba(23, 23, 23, 1);
     justify-content: center;
@@ -12,18 +7,41 @@ body {
     display: flex;
 }
 
-#Nike {
-    position: relative;
-    background: linear-gradient(to bottom, rgba(242, 88, 47, 1), rgba(155, 0, 62, 1));
-    padding: 50px;
+#footer {
+    background-color: rgba(23, 23, 23, 1);
     font-family: "Inter", serif;
+    justify-content: center;
+    align-items: center;
     font-size: 13px;
+    padding: 20px;
     color: #fff;
+    display: flex;
+    gap: 2px;
+}
+
+#Nike, #Adidas, #Lacoste {
+    font-family: "Inter", serif;
+    position: relative;
     overflow: hidden;
+    font-size: 13px;
+    padding: 50px;
+    color: #fff;
+}
+
+#Nike {
+    background: linear-gradient(to bottom, rgba(242, 88, 47, 1), rgba(155, 0, 62, 1));
+}
+
+#Adidas {
+    background: linear-gradient(to bottom, rgba(67, 8, 106, 1), rgba(1, 204, 245, 1));
+}
+
+#Lacoste {
+    background: linear-gradient(to bottom, rgb(54, 167, 1), rgb(141, 245, 92));
 }
 
 /* DIVISÕES */
-#TopNike {
+#TopSecao {
     justify-content: space-between;
     margin-bottom: 20px;
     align-items: center;
@@ -84,12 +102,26 @@ body {
     left: 50%;
 }
 
-#LogoBrand2 {
+#LacosteBrand {
+    transform: translateX(-50%);
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    width: 7%;
+    left: 50%;
+}
+
+#LogoBrand2, #LacosteBrand2 {
     display: none;
 }
 
 #LogoEscr {
     width: 40%;
+}
+
+#LogoDown {
+    width: 10%;
+    padding-bottom: 20px;
 }
 
 #RoupaImg {
@@ -103,15 +135,10 @@ body {
 }
 
 /* BOTÕES */
-.Abtn {
-    background: linear-gradient(45deg, rgba(67, 8, 106, 1), rgba(1, 204, 245, 1));
-}
-
-.BuyNike {
+.BuyNike, .BuyAdidas, .BuyLacoste {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.726);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background-color: rgba(242, 88, 47, 1);
     border-radius: 50px;
     padding: 10px 25px;
     font-weight: bold;
@@ -122,8 +149,24 @@ body {
     width: 100%;
 }
 
+.BuyNike {
+    background-color: rgba(242, 88, 47, 1);
+}
+
+.BuyAdidas {
+    background-color:  rgb(0, 177, 212);
+}
+
+.BuyLacoste {
+    background-color: rgb(6, 199, 22);
+}
+
+.Abtn {
+    background: linear-gradient(45deg, rgba(67, 8, 106, 1), rgba(1, 204, 245, 1));
+}
+
 .Lbtn {
-    background: linear-gradient(45deg, rgba(92, 222, 245, 1), rgba(1, 245, 29, 1));
+    background: linear-gradient(45deg, rgb(54, 167, 1), rgb(141, 245, 92));
 }
 
 .Nbtn {
@@ -181,6 +224,16 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.BuyAdidas:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.BuyLacoste:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* MOBILE*/
 @media screen and (max-width: 768px) {
     /* SEÇÃO */
@@ -189,7 +242,7 @@ body {
         align-items: center;
     }
 
-    #Nike {
+    #Nike, #Adidas, #Lacoste {
         font-size: 15px;
         padding: 25px;
     }
@@ -255,7 +308,7 @@ body {
         display: none;
     }
 
-    #LogoBrand {
+    #LogoBrand, #LacosteBrand {
         display: none;
     }
 
@@ -263,6 +316,12 @@ body {
         margin-bottom: 0px;
         display: block;
         width: 25%;
+    }
+
+    #LacosteBrand2 {
+        margin-bottom: 0px;
+        display: block;
+        width: 20%;
     }
 
     /* BOTÕES */
@@ -298,4 +357,18 @@ body {
     .btns, p2 {
         display: none;
     }
+
+    @media (hover: none) and (pointer: coarse) {
+        #Roupas:hover {
+            transform: none;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.726);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    
 }

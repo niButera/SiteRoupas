@@ -1,3 +1,8 @@
+body {
+    background-color: rgba(23, 23, 23, 1);
+    margin: 80px 0px 0px 0px;
+}
+
 /* FONTES */
 p {
     font-family: "Inter", serif;
@@ -17,12 +22,153 @@ p2 {
     font-size: 13px;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: "Inter", serif;
     font-optical-sizing: auto;
-    color: rgb(247, 114, 77);
     font-style: normal;
     font-weight: bold;
     font-size: 20px; 
     margin: 0px 0px 10px;
+}
+
+h1 {
+    color: rgb(247, 114, 77);
+}
+
+h2 {
+    color: rgba(1, 204, 245, 1);
+}
+
+h3 {
+    color:  rgb(141, 245, 92);
+}
+
+a {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.13);
+    color: rgb(85, 145, 16);
+    font-family: "inter", serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* CABEÇALHO */
+header {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+    transition: transform 0.3s ease-in-out;
+    background-color: rgba(22, 22, 22, 0.685);
+    backdrop-filter: blur(50px);
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+}
+
+#h-content {
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+    gap: 30px;
+}
+
+#h-logos {
+    justify-content: start;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+}
+
+#h-icon {
+    padding-right: 25px;
+    width: 60px;
+}
+
+#h-logotxt {
+    width: 15%;
+}
+
+#menu {
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    width: 23px;
+}
+
+#menu2 {
+    display: none;
+    width: 23px;
+}
+
+#menu:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.menu-open {
+    transition: margin-top 0.3s ease;
+    margin-top: 140px; 
+}
+
+/* TOPICOS */
+#topicos {
+    background-color: rgba(0, 35, 57, 1);
+    transition: max-height 0.2s ease-out;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    max-height: 0;
+    width: 100%;
+    top: 100%;
+}
+
+#topicos.show {
+    max-height: 500px;
+}
+
+#topicos a {
+    font-family: "Inter", sans-serif;
+    color: rgb(233, 233, 233);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px;
+}
+
+#midias {
+    justify-content: center;
+    width: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    #h-content {
+        justify-content: center;
+        display: flex;
+    }
+
+    #h-icon {
+        justify-content: space-between;
+        padding-right: 100px;
+        width: 60px;
+    }
+
+    #h-logotxt {
+        display: none;
+    }
+
+    #menu {
+        transition: transform 0.3s ease, box-shadow 0.2s ease;
+        cursor: pointer;
+        width: 23px;
+    }
+
+    #menu2 {
+        display: block;
+        width: 23px;
+    }
 }
