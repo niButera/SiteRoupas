@@ -1,6 +1,13 @@
 body {
     background-color: rgba(23, 23, 23, 1);
     margin: 80px 0px 0px 0px;
+    flex-direction: column; 
+    min-height: 100vh;
+    display: flex;
+}
+
+#main-content {
+    flex: 1;
 }
 
 /* FONTES */
@@ -31,17 +38,6 @@ h1, h2, h3 {
     margin: 0px 0px 10px;
 }
 
-h1 {
-    color: rgb(247, 114, 77);
-}
-
-h2 {
-    color: rgba(1, 204, 245, 1);
-}
-
-h3 {
-    color:  rgb(141, 245, 92);
-}
 
 a {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.13);
@@ -50,6 +46,18 @@ a {
     text-decoration: none;
     font-weight: bold;
     font-size: 13px;
+}
+
+#footer {
+    background-color: rgba(23, 23, 23, 1);
+    font-family: "Inter", serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    gap: 5px;
 }
 
 /* CABEÇALHO */
@@ -72,7 +80,13 @@ header {
     margin: 0 auto;
     display: flex;
     width: 90%;
-    gap: 30px;
+}
+
+#h-menu {
+    justify-content: row;
+    align-items: center;
+    display: flex;
+    gap: 20px;
 }
 
 #h-logos {
@@ -109,12 +123,12 @@ header {
 
 body.menu-open {
     transition: margin-top 0.3s ease;
-    margin-top: 140px; 
+    margin-top: 130px; 
 }
 
 /* TOPICOS */
 #topicos {
-    background-color: rgba(0, 35, 57, 1);
+    background-color: rgba(14, 14, 14, 0.932);
     transition: max-height 0.2s ease-out;
     flex-direction: column;
     position: absolute;
@@ -147,14 +161,8 @@ body.menu-open {
 
 @media screen and (max-width: 768px) {
     #h-content {
-        justify-content: center;
-        display: flex;
-    }
-
-    #h-icon {
         justify-content: space-between;
-        padding-right: 100px;
-        width: 60px;
+        display: flex;
     }
 
     #h-logotxt {

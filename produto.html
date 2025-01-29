@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="css/media/logo.png">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/buy.css">
+
+    <!-- FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>Detalhes do Produto</title>
+</head>
+
+<body>
+    <header>
+        <div id="h-content">
+            <div id="h-logos">
+                <img id="h-icon" src="css/media/logo.png" alt="Logo">
+                <img id="h-logotxt" src="css/media/logo escrita.png" alt="Ilha das True">
+            </div>
+            <div id="h-menu">
+                <img id="menu" src="css/media/carrinho.png">
+                <img id="menu" onclick="window.location.href='https://www.instagram.com/ilhadastrue/'" src="css/media/instagram2.png" alt="Instagram">
+                <a href="javascript:void(0);" onclick="Menu()">
+                    <img id="menu2" src="css/media/hmbrgr.png" alt="hmburgr">
+                </a>
+            </div>
+        </div>
+
+        <div id="topicos">
+            <a href="">Adidas</a>
+            <a href="">Lacoste</a>
+            <a href="">Nike</a>
+            <a href="">Ver Mais</a>
+        </div>
+    </header>
+
+    <div id="main-content">
+        <button id="back" onclick="location.href='index.html'"> Voltar para o Início </button>
+
+        <div id="BuyContent">
+            <div id="ImgContent">
+                <img id="C-ImgBig" src="css/media/AdidasTshirtSample.png" alt="">
+            </div>
+
+            <div>
+                <div id="content">
+                    <p>Titulo com o nome da roupa</p>
+                    <h1>R$65,00</h1>
+                </div>
+                <div id="content">
+                    <p>Tamanho da peça</p>
+                    <button class="size">P</button>
+                    <button class="size">M</button>
+                    <button class="size">G</button>
+                    <button class="size">GG</button>
+                </div>
+                <div id="content">
+                    <p>Cor</p>
+                    <button class="color">Preta</button>
+                    <button class="color">Branca</button>
+                </div>
+                <div id="content">
+                    <p>Finalização</p>
+                    <button class="Btn2" id="end" onclick="window.location.href='mandar para o whats'">Finalizar
+                        Compra</button>
+                    <button class="Btn3" id="car" onclick="window.location.href='mandar para o carrinho'">Colocar no
+                        Carrinho</button>
+                    <p>Para sua segurança a compra sera finalizada pelo WhatsApp</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        Site desenvolvido por<a href="https://github.com/niButera">Nicolas Butera</a>e<a
+            href="https://github.com/yukio-sato">Yukio Sato</a>
+    </div>
+
+    <script src="js/select.js"></script>
+    <script src="js/hamburguer.js"></script>
+</body>
+
+</html>

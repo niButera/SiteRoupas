@@ -1,0 +1,174 @@
+body {
+    background: linear-gradient(to right, rgba(242, 88, 47, 1), rgba(155, 0, 62, 1), rgba(67, 8, 106, 1), rgba(1, 204, 245, 1));
+    margin-top: 100px;
+}
+
+/* DIVS */
+#main-content {
+    padding: 0px 70px;
+}
+
+#BuyContent {
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.281);
+    background-color: rgba(22, 22, 22, 0.685);
+    backdrop-filter: blur(50px);
+    border-radius: 40px;
+    margin: 30px 0px;
+    padding: 40px;
+    display: flex;
+    gap: 10px;
+}
+
+#ImgContent {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* BOTÃO */
+#end {
+    background-image: url('media/whats.png');
+    background-position: 18px center;
+    background-repeat: no-repeat; 
+    background-size: 17px;
+    padding-left: 50px;
+}
+
+#car {
+    background-image: url('media/carrinho.png');
+    background-position: 18px center;
+    background-repeat: no-repeat; 
+    background-size: 17px;
+    padding-left: 50px;
+}
+
+.Btn2 {
+    background-color: rgb(5, 196, 31);
+}
+
+.Btn3 {
+    background-color: rgb(32, 162, 223);
+}
+
+.Btn2, .Btn3 {
+    /* CAIXA */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.473);
+    transition: transform 0.3s ease;
+    margin: 0px 5px 0px 0px;
+    border-radius: 40px;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+    border: 0px;
+    /* FONTE */
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.color {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.473);
+    font-family: "Inter", sans-serif;
+    transition: transform 0.3s ease;
+    margin: 0px 5px 0px 0px;
+    border-radius: 40px;
+    padding: 10px 25px;
+    cursor: pointer;
+    border: 0px;
+} 
+
+.size, #back {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.473);
+    font-family: "Inter", sans-serif;
+    transition: transform 0.3s ease;
+    margin: 0px 5px 0px 0px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 0px;
+}
+
+.size.selected, .color.selected {
+    background-color: #23a6f0;
+    transform: scale(1.1);
+    font-weight: bold;
+    color: white;
+}
+
+#back {
+    background-color: rgba(22, 22, 22, 0.685);
+    color: white;
+}
+
+.Btn2:hover, .Btn3:hover, .color:hover, .size:hover, #end:hover, #car:hover, #back:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGENS */
+#C-ImgBig {
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.281);
+    border-radius: 30px;
+    flex-direction: row;
+    width: 70%;
+}
+
+/* FONTES */
+h1 {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(35, 185, 255);
+}
+
+/* MOBILE*/
+@media screen and (max-width: 768px) {
+    /* DIVS */
+    #main-content {
+        padding: 0px 20px;
+    }
+
+    #BuyContent {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* IMAGENS */
+    #C-ImgBig {
+        width: 100%;
+    }
+
+    /* FONTES */
+    h1 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    /* BOTÕES */
+    .Btn2, .Btn3, .color, .size, #end, #car, #back {
+        padding: 10px;
+    }
+    
+    #back {
+        padding: 15px;
+    }
+
+    #car, #end {
+        background-position: 15px center;
+        padding: 15px 100px 15px 50px;
+        white-space: nowrap;
+    }
+    
+    #end {
+        margin-bottom: 10px;
+    }
+
+    .size, .color {
+        padding: 15px 25px;
+    }
+}
