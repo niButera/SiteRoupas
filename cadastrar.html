@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="css/media/logo.png">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/cadastrar.css">
+
+    <!-- FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div id="main-content">
+        
+        <div id="cadastro">
+         <img src="css/media/lohgofull.png" id="loogo">
+            <div id="box">
+                <h1> Cadastro </h1>
+                <p> Prossiga com o cadastro</p>
+                <input placeholder="Nome" id="nome" type="text" class="ImputBox validate" required>
+                <input placeholder="E-Mail" id="email" type="text" class="ImputBox validate" required>
+                <input placeholder="Senha" id="senha" type="text" class="ImputBox validate" required>
+                <button id="done" onclick="location.href='index.html'"> Concluir Cadastro</button>
+
+                <p> Já possuí um cadastro? <a href="entrar.html">Entre</a></p>
+            </div>
+        </div>
+        <button id="back" onclick="location.href='index.html'"> Voltar para o Inicio</button>
+    </div>
+
+    <div id="footer">
+        Site desenvolvido por<a href="https://github.com/niButera">Nicolas Butera</a>e<a
+            href="https://github.com/yukio-sato">Yukio Sato</a>
+    </div>
+</body>
+
+</html>
