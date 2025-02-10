@@ -7,7 +7,7 @@
     display: flex;
 }
 
-#Nike, #Adidas, #Lacoste {
+#Nike, #Adidas, #Lacoste, #VerMais {
     font-family: "Inter", serif;
     position: relative;
     overflow: hidden;
@@ -26,6 +26,10 @@
 
 #Lacoste {
     background: linear-gradient(to bottom, rgb(54, 167, 1), rgb(141, 245, 92));
+}
+
+#VerMais {
+    background: linear-gradient(to top, rgba(31, 31, 31, 0),  rgb(0, 177, 212));
 }
 
 /* DIVISÕES */
@@ -118,7 +122,7 @@
 }
 
 /* BOTÕES */
-.BuyNike, .BuyAdidas, .BuyLacoste {
+.BuyNike, .BuyAdidas, .BuyLacoste, .BuyMore {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.726);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -144,6 +148,10 @@
     background-color: rgb(6, 199, 22);
 }
 
+.BuyMore {
+    background-color:  rgb(0, 177, 212);
+}
+
 .Abtn {
     background: linear-gradient(45deg, rgba(67, 8, 106, 1), rgba(1, 204, 245, 1));
 }
@@ -159,7 +167,6 @@
 .CDbtn {
     background: linear-gradient(45deg, rgb(47, 109, 242),rgba(1, 204, 245, 1));
 }
-
 
 .EEbtn {
     visibility: hidden;
@@ -188,7 +195,7 @@
     border: 0px;
 }
 
-.Abtn:hover, .Nbtn:hover, .Lbtn:hover, .VMbtn:hover, .CDbtn, .BuyNike:hover, .BuyAdidas:hover, .BuyLacoste:hover {
+.Abtn:hover, .Nbtn:hover, .Lbtn:hover, .VMbtn:hover, .CDbtn, .BuyNike:hover, .BuyAdidas:hover, .BuyLacoste:hover, .BuyMore:hover {
     transform: scale(1.04);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
